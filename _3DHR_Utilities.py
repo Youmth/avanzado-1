@@ -411,7 +411,7 @@ def focus3D(U:np.ndarray,
 def prop_focus(U:np.ndarray, lambda_:float, dx:float,
                dy:float, min_z:float, max_z:float,
                steps:float, scale_factor:float = 1, sigma:float = 1,
-               metric:str = 'variance', rimpercent:float = 0) -> float:
+               metric:str = 'variance') -> float:
 
     range_ = np.linspace(min_z, max_z, steps)
     range_ = np.round(range_, 4)
