@@ -259,7 +259,8 @@ def compensate(hologram:np.ndarray,
 def save(hologram:np.ndarray,
          outname:str, path:str = '',
          ext:str = 'bmp',
-         cmap:str = 'gray') -> None:
+         cmap:str = 'gray',
+         out_amp:bool = 'True') -> None:
     '''Function to save the hologram to a file'''
     CompA = np.abs(hologram)
     CompP = np.angle(hologram)
@@ -276,10 +277,12 @@ def save(hologram:np.ndarray,
     else:
         prefix = ''
 
+
     plt.imsave(prefix + outname + '-Phase' + '.' + ext, CompP, cmap=cmap)
 
     # Save the phase image
-    plt.imsave(prefix + outname + '-Amplitude' + '.' + ext, CompA, cmap=cmap)
+    if out_amp:
+        plt.imsave(prefix + outname + '-Amplitude' + '.' + ext, CompA, cmap=cmap)
 
 ######################################################################################
 
