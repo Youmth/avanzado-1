@@ -408,7 +408,7 @@ def focus3D(U:np.ndarray,
 
 # Propagates to a number of distances and returns the one with the most focus. 
 # A second metric to be added
-def prop_focus(U:np.ndarray, center: tuple, w_size: tuple, lambda_:float, dx:float,
+def prop_focus(U:np.ndarray, lambda_:float, dx:float,
                dy:float, min_z:float, max_z:float,
                steps:float, scale_factor:float = 1, sigma:float = 1,
                metric:str = 'variance', rimpercent:float = 0) -> float:
