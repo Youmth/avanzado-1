@@ -278,11 +278,11 @@ def save(hologram:np.ndarray,
         prefix = ''
 
 
-    plt.imsave(prefix + '-Phase' + outname +  '.' + ext, CompP, cmap=cmap)
+    plt.imsave(prefix + 'Phase-' + outname +  '.' + ext, CompP, cmap=cmap)
 
     # Save the phase image
     if out_amp:
-        plt.imsave(prefix + outname + '-Amplitude' + '.' + ext, CompA, cmap=cmap)
+        plt.imsave(prefix  + 'Amplitude-'+ outname + '.' + ext, CompA, cmap=cmap)
 
 ######################################################################################
 
