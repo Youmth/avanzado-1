@@ -7,6 +7,8 @@ lambda_ = 0.633 #micras
 
 region = 3
 
+focus_points = 5
+
 path = "C:/Users/dacv0/Desktop/holograms/"
 
 grab = []
@@ -19,5 +21,6 @@ for i in range(1, 1165):
 
 for i in range(len(grab)):
     holo = compensate(grab[i], dx, dy, lambda_, region, step=0.5, depth=3)
+    holo, _, _ = prop_focus(holo, lambda_, dx, dy, -200, 200, focus_points, 40)
 
-    save(holo, f'pacienteSCD_definitivo_hipoxia_RE_{i}', path=path+'resultados/', ext='bmp', out_amp = False)
+    save(holo, f'pacienteSCD_definitivo_hipoxia_RE_{i}', path=path+'resultados2/', ext='bmp', out_amp = False)
