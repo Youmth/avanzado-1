@@ -1,5 +1,11 @@
 from _3DHR_Utilities import *
 
+'''Bulk reconstruction.
+
+This code takes all the images withing the path that have a sequential name (hard coded) 
+and reconstructs all of them one by one.'''
+
+
 dx = 3.5 #micras
 dy = 3.5
 
